@@ -1,8 +1,6 @@
 
-
-
 .titre {
-color:black;
+    color:black;
     background-color: white;
     border: 1px solid #7f837d;
     padding-top: 50px;
@@ -17,8 +15,7 @@ color:black;
     margin-top: 100px;
     width: 900px;
     display: flex;
-    flex-direction: row;
-    font-family: "Open Sans";  
+    flex-direction: row;  
 }
 .form-control {
     color:black;
@@ -40,32 +37,6 @@ color:black;
     
 }
 
-.inside {
-    border: 1px solid #7f837d;
-    ;
-}
-
-.insideButton {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.text {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.mod {
-    padding: 0;
-    border: none;
-    background: none; 
-}
-
-.x {
-    padding: 0;
-    border: none;
-    background: none;
-    margin-left: 10px;
 
 .tache {
     color:black;
@@ -79,7 +50,7 @@ color:black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: "Open Sans";
+    
 }
 
 
