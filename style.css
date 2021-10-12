@@ -1,10 +1,18 @@
+
+button {
+    cursor: pointer;
+}
+
 .titre {
     color:black;
     background-color: white;
     border: 1px solid #7f837d;
     padding-top: 50px;
     padding-left: 50px;
-    box-shadow: 1px 1px 12px #555;
+    padding-bottom: 20px;
+    box-shadow: 1px 1px 15px #555;
+    font-family: "Open sans";
+    font-size: 40px;
     
     
 }
@@ -15,7 +23,10 @@
     width: 900px;
     display: flex;
     flex-direction: row;  
+    font-family: "Open sans";
 }
+
+
 .form-control {
     color:black;
     background-color: white;
@@ -37,6 +48,33 @@
 }
 
 
+.inside {
+    border: 1px solid #7f837d;
+    ;
+}
+
+.insideButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mod {
+    padding: 0;
+    border: none;
+    background: none; 
+}
+
+.x {
+    padding: 0;
+    border: none;
+    background: none;
+    margin-left: 10px;}
+
 .tache {
     color:black;
     background-color: white;
@@ -49,15 +87,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    font-family: "Open sans";
+    margin-bottom: 1px;
+}
+
+.todolist h2 {
+    font-size: 35px;
 }
 
 
 .buttontodo button {
     width: 95px;
     height: 35px;
-    border: 2px solid rgb(206, 206, 206);
-    background-color: white;
+    border: 2px solid ;
     border-radius: 20px;
     
 }
@@ -68,4 +110,53 @@
     border: 2px solid #7f837d;
     background-color: white;
     border-radius: 0px;
+
 }
+
+.todol{
+    background-color: #4db1f7;
+    color: white;
+    border: #4db1f7;
+    transition: background-color 1s;
+
+}
+
+.todol:hover {
+    background-color: #2a5e82;
+    border-color: #2a5e82;
+  }
+
+.todol:focus {
+    outline:0;
+}
+.doing {
+    background-color: #30d13b;
+    color: white;
+    border: #30d13b;
+    transition: background-color 1s;
+    
+}
+
+.doing:hover {
+    background-color: #287d2e;
+    border-color: #287d2e;
+}
+.doing:focus {
+    outline:0;
+}
+.done{
+    background-color: #ff4d4d;
+    color: white;
+    border: #ff4d4d;
+    transition: background-color 1s;
+}
+.done:hover {
+    background-color: #732121;
+    border-color: #732121;
+  }
+
+.done:focus {
+    outline:0;
+}
+
+
