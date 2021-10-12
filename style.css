@@ -1,3 +1,6 @@
+
+
+
 .titre {
     color:black;
     background-color: white;
@@ -32,4 +35,32 @@
     margin-right: auto;
     width: 900px
     
+}
+
+.inside {
+    border: 1px solid #7f837d;
+    ;
+}
+
+.insideButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mod {
+    padding: 0;
+    border: none;
+    background: none; 
+}
+
+.x {
+    padding: 0;
+    border: none;
+    background: none;
+    margin-left: 10px;
 }
