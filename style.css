@@ -1,49 +1,11 @@
 
-button {
-    cursor: pointer;
-}
-
-.titre {
-    color:black;
-    background-color: white;
-    border: 1px solid #7f837d;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-bottom: 20px;
-    box-shadow: 1px 1px 15px #555;
-    font-family: "Open sans";
-    font-size: 40px;
-    
-    
-}
-.form-group {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    width: 900px;
-    display: flex;
-    flex-direction: row;  
-    font-family: "Open sans";
-}
-
-
-.form-control {
-    color:black;
-    background-color: white;
-    border: 1px solid #7f837d;
-    margin-left: auto;
-    margin-right: auto;
-    width: 900px
-    
-}
-
 .barre {
     color:black;
     background-color: white;
     border: 1px solid #7f837d;
     margin-left: auto;
     margin-right: auto;
-    width: 900px
+    width: 900px;
     
 }
 
@@ -73,12 +35,56 @@ button {
     padding: 0;
     border: none;
     background: none;
-    margin-left: 10px;}
+    margin-left: 10px;
+}
+
+
+button {
+    cursor: pointer;
+}
+/* titre  */
+.titre {
+    color:black;
+    background-color: white;
+    border: 1px solid #7f837d;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    box-shadow: 1px 1px 15px #555;
+    font-family: "Open sans";
+    font-size: 40px;  
+    align-items: center;  
+    display: flex;
+}
+/* form group  */
+.form-group {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 900px;
+    display: flex;
+    flex-direction: row;  
+    font-family: "Open sans";
+}
+
+
+.form-control {
+    color:black;
+    background-color: white;
+    border: 1px solid #b0b6ad;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px
+    
+}
+
+
+/* section tache  */
 
 .tache {
     color:black;
     background-color: white;
-    border: 1px solid #7f837d;
+    border: 1px solid #b0b6ad;
     margin-left: auto;
     margin-right: auto;
     width: 900px;
@@ -90,46 +96,51 @@ button {
     font-family: "Open sans";
     margin-bottom: 1px;
 }
-
 .todolist h2 {
     font-size: 35px;
 }
 
-
-.buttontodo button {
+.buttontodo button { /* bouton todo, doing, done  */
     width: 95px;
     height: 35px;
     border: 2px solid ;
-    border-radius: 20px;
-    
-}
+    border-radius: 20px;  
+} 
 
-.form-group button{
+.add{ /* Bouton add */
     width: 95px;
     height: 40px;
-    border: 2px solid #7f837d;
+    border: 1px solid #b0b6ad;
     background-color: white;
-    border-radius: 0px;
-
+    border-radius: 5px;
+    transition: background-color 1s;
 }
 
-.todol{
+.add:hover{ /* Bouton add */
+    background-color: #9ba199;
+    border-color: #717470;
+}
+
+.add:focus{ /* Bouton add */
+    outline:0;
+}
+
+.todol{ /* Bouton todo */
     background-color: #4db1f7;
     color: white;
     border: #4db1f7;
     transition: background-color 1s;
-
 }
 
-.todol:hover {
+.todol:hover { /* Bouton todo */
     background-color: #2a5e82;
     border-color: #2a5e82;
-  }
+}
 
-.todol:focus {
+.todol:focus { /* Bouton todo */
     outline:0;
 }
-.doing {
+.doing { /* Bouton doing */
     background-color: #30d13b;
     color: white;
     border: #30d13b;
@@ -137,26 +148,50 @@ button {
     
 }
 
-.doing:hover {
+.doing:hover { /* Bouton doing */
     background-color: #287d2e;
     border-color: #287d2e;
 }
-.doing:focus {
+.doing:focus { /* Bouton doing */
     outline:0;
 }
-.done{
+.done{ /* Bouton done */
     background-color: #ff4d4d;
     color: white;
     border: #ff4d4d;
     transition: background-color 1s;
 }
-.done:hover {
+.done:hover { /* Bouton done */
     background-color: #732121;
     border-color: #732121;
-  }
+}
 
-.done:focus {
+.done:focus { /* Bouton done */
     outline:0;
 }
 
 
+.random { /* Bouton random task */
+    color:black;
+    background-color: white;
+    border: 1px solid #b0b6ad;
+    margin-left: auto;
+    margin-right: 15px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Open sans";
+    margin-bottom: 1px;
+    font-size: 19px;
+    border-radius: 5px;
+    transition: background-color 1s;
+}
+.random:hover{ /* Bouton random task */
+    background-color: #bebebe;
+    border-color: #999797;
+}
+.random:focus { /* Bouton random task */
+    outline:0;
+}
