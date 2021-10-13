@@ -1,9 +1,7 @@
 
 var inmain = document.getElementById("main")
 var array = []
-var randomBtn = document.getElementById("random");
-var list = ["manger","dormir","boire","pleurer","douche","nettoyer"]
-list.innerHTML
+
 
 
 
@@ -39,22 +37,29 @@ function randomTask() {
         inmain.innerHTML = inmain.innerHTML + ` <div class="inside"> <p class="text">${task.value}</p> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x"> <i class="fas fa-trash-alt"></i> </button> </div> </div> `
     })
 
+    array.forEach(function(task, index) {
+        inmain.innerHTML = inmain.innerHTML + ` 
+            <div class="inside" id="delete"> 
+                <p class="text">${task.value}</p> 
+                <div class="insideButton"> 
+                    <button class="mod" id="modif-${index}" onclick = "modify(${index})"> Modifier </button> 
+                    <button class="x" onclick = "removeItem(${index})"> <i class="fas fa-trash-alt"></i> 
+                    </button> 
+                </div> 
+            </div> 
+        `
+      })
+    
+     console.log(array)                
 }
 
+function modify(index) {
+    var choice = document.getElementById(`modif-${index}`)
+    choice.innerHTML = `<select>
+                                <option value="toDo">Do</option>
+                                <option value="Doing">Doing</option>
+                                <option value="Done">Done</option>
+                            </select>`
+  }
 
 
-
-
-
-// function onButtonClick() {
-
-    
-
-//     .innerHTML = `<ul class="nav nav-tabs"> 
-//                             <ul class="dropdown-menu">
-//                                 <li><a class="dropdown-item" href="#">Action</a></li>
-//                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-//                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
-//                             </ul>
-//                         <ul class="nav nav-tabs">`
-// }
