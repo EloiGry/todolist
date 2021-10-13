@@ -1,3 +1,5 @@
+module.export = onTaskSubmit
+
 var inmain = document.getElementById("main")
 var array = []
 
@@ -22,6 +24,7 @@ function onTaskSubmit() {
 
 
 
+
 // function onButtonClick() {
 
     
@@ -34,6 +37,4 @@ function onTaskSubmit() {
 //                             </ul>
 //                         <ul class="nav nav-tabs">`
 // }
-
-
 
