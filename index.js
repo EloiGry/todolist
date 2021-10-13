@@ -15,7 +15,7 @@ function onTaskSubmit() {
     inmain.innerHTML = ""
     
     array.forEach(function(task) {
-        inmain.innerHTML = inmain.innerHTML + ` <div class="inside"> <p class="text">${task.value}</p> <input type="checkbox"> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x"> <i class="fas fa-trash-alt"></i> </button> </div> </div> `
+        inmain.innerHTML = inmain.innerHTML + ` <div class="inside"> <input type="checkbox"><p class="text">${task.value}</p>  <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x"> <i class="fas fa-trash-alt"></i> </button> </div> </div> `
       })                 
 }
 
@@ -23,8 +23,8 @@ function onTaskSubmit() {
     array.forEach(function(task, index) {
         inmain.innerHTML = inmain.innerHTML + ` 
             <div class="inside" id="delete"> 
-                <p class="text">${task.value}</p> 
                 <input type="checkbox"> 
+                <p class="text">${task.value}</p> 
                 <div class="insideButton"> 
                     <button class="mod" id="modif-${index}" onclick = "modify(${index})"> Modifier </button> 
                     <button class="x" onclick = "removeItem(${index})"> <i class="fas fa-trash-alt"></i> 
@@ -47,3 +47,23 @@ function modify(index) {
   }
 
 
+function button(filter){
+    if (filter === "todo"){
+        var toDoList = tasks.filter(function(task){
+            return task.status = "to do"
+        })
+        return toDoList
+    }
+    if (filter === "doing"){
+        var doingList = tasks.filter(function(task){
+            return task.status = "doing"
+        })
+        return doingList
+    }
+    if (filter === "done"){
+        var doneList = tasks.filter(function(task){
+            return task.status = "done"
+        })
+        return doneList
+    }
+}
