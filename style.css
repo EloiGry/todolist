@@ -162,8 +162,8 @@ button {
     transition: background-color 1s;
 }
 .done:hover { /* Bouton done */
-    background-color: #732121;
-    border-color: #732121;
+    background-color: #7c3636;
+    border-color: #703434;
 }
 
 .done:focus { /* Bouton done */

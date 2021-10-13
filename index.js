@@ -19,9 +19,7 @@ function onTaskSubmit() {
     
     array.forEach(function(task) {
         inmain.innerHTML = inmain.innerHTML + ` <div class="inside"> <p class="text">${task.value}</p> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x"> <i class="fas fa-trash-alt"></i> </button> </div> </div> `
-      })
-    
-                     
+      })                 
 }
 
 function randomTask() {
@@ -29,7 +27,7 @@ function randomTask() {
     // recuperer element qui correspond au chiffre dans le tableau list
     // ajouter a la valeur du task
     var tasks = {
-        value : "test",
+        value : "testjnuininninnin",
         status : "To Do"
     }
 
@@ -40,7 +38,9 @@ function randomTask() {
     array.forEach(function(task) {
         inmain.innerHTML = inmain.innerHTML + ` <div class="inside"> <p class="text">${task.value}</p> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x"> <i class="fas fa-trash-alt"></i> </button> </div> </div> `
     })
+
 }
+
 
 
 
