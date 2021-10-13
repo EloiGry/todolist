@@ -2,11 +2,6 @@
 var inmain = document.getElementById("main")
 var array = []
 
-
-
-
-
-
 function onTaskSubmit() {
 
 
@@ -17,27 +12,24 @@ function onTaskSubmit() {
 
     array.push(tasks)
     inmain.innerHTML = ""
-    
-    array.forEach(function(task) {
-        inmain.innerHTML = inmain.innerHTML + ` <div class="inside"> <p class="text">${task.value}</p> <input type="checkbox"> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x"> <i class="fas fa-trash-alt"></i> </button> </div> </div> `
-      })                 
-}
-
 
     array.forEach(function(task, index) {
         inmain.innerHTML = inmain.innerHTML + ` 
             <div class="inside" id="delete"> 
                 <p class="text">${task.value}</p> 
-                <input type="checkbox"> 
                 <div class="insideButton"> 
-                    <p class="write"> <i class="fas fa-pencil-alt" id="write${indexElement}" onclick = "write(${indexElement})"></i> </p> 
+                    <p class="write"> <i class="fas fa-pencil-alt" id="write${index}" onclick = "write(${index})"></i> </p> 
                     <button class="mod" id="modif-${index}" onclick = "modify(${index})"> Modifier </button> 
                     <button class="x" onclick = "removeItem(${index})"> <i class="fas fa-trash-alt"></i> 
                     </button> 
                 </div> 
             </div> 
         `
-      })
+      })            
+}
+
+
+   
                   
 
 function removeItem(index) {
@@ -60,8 +52,8 @@ function modify(index) {
 
   }
 
-  function write(indexElement) {
-    var rescribe = document.getElementById(`write-${indexElement}`)
+  function write(index) {
+    var rescribe = document.getElementById(`write${index}`)
     rescribe.innerHTML = `<form>
                             <input type="texte" placeholder : "New name of the task">
                          </form>`
