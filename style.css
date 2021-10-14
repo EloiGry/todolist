@@ -1,4 +1,6 @@
-
+body{
+    background-color: rgb(247, 247, 199);
+}
 
 .barre {
     color:black;
@@ -21,12 +23,19 @@
     justify-content: space-between;
     font-family: "Open sans";
 }
-
+.inputChange {
+    width: 95px;
+    height: 40px;
+    border: 1px solid #b0b6ad;
+    background-color: white;
+    border-radius: 5px;
+    transition: background-color 1s;
+}
 .insideButton {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
-    color: rgb(211, 211, 98);
+    color: rgb(155, 155, 72);
 }
 
 .text {
