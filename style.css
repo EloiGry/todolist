@@ -30,6 +30,7 @@ body{
     background-color: white;
     border-radius: 5px;
     transition: background-color 1s;
+
 }
 .insideButton {
     display: flex;
