@@ -44,7 +44,7 @@ function modify(index) {
                                 <option value="Doing">Doing</option>
                                 <option value="Done">Done</option>
                             </select>`
-  }
+                        }
 
 
 function button(filter){
