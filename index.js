@@ -1,4 +1,5 @@
 
+
 var inmain = document.getElementById("main")
 var array = []
 
@@ -83,23 +84,24 @@ function modify(index) {
 
 
 
-// function button(filter){
-//     if (filter === "todo"){
-//         var toDoList = tasks.filter(function(array){
-//             return array.status = "to do"
-//         })
-//         return toDoList
-//     }
-//     if (filter === "doing"){
-//         var doingList = arrays.filter(function(array){
-//             return array.status = "doing"
-//         })
-//         return doingList
-//     }
-//     if (filter === "done"){
-//         var doneList = arrays.filter(function(array){
-//             return array.status = "done"
-//         })
-//         return doneList
-//     }
-// }
+
+function button(filter){
+    if (filter === "todo"){
+        var toDoList = tasks.filter(function(array){
+            return array.status = "to do"
+        })
+        return toDoList
+    }
+    if (filter === "doing"){
+        var doingList = arrays.filter(function(array){
+            return array.status = "doing"
+        })
+        return doingList
+    }
+    if (filter === "done"){
+        var doneList = arrays.filter(function(array){
+            return array.status = "done"
+        })
+        return doneList
+    }
+}
