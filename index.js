@@ -1,7 +1,7 @@
 
 var inmain = document.getElementById("main")
 var array = []
-
+// Add //
 function displayList (array) {
     inmain.innerHTML = ""
 
@@ -47,7 +47,6 @@ function onTaskSubmit() {
 }         
    
                   
-
 function removeItem(index) {
     array.splice(index, 1)
     inmain.innerHTML = ""
@@ -70,7 +69,6 @@ function addNewTask (index) {
     array[index].value = document.getElementById("inputChange").value
     displayList(array)
 }
-
 
 
 function onSelectChange (index) {
