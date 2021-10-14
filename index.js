@@ -7,14 +7,22 @@ function displayList (array) {
 
     array.forEach(function(task, index) {
         inmain.innerHTML = inmain.innerHTML + ` 
-            <div class="inside" id="delete"> 
+            <div class="inside" id="delete">
                 <p class="text">${task.value}</p> 
                 <div class="insideButton"> 
                     <p class="write" id="write${index}"> <i class="fas fa-pencil-alt" onclick="stylo(${index})"></i> </p> 
+                    <select class="stars" onChange="onStarChange(${index})">
+                        <option value="1s">&#9733</option>
+                        <option value="2s">&#9733&#9733</option>
+                        <option value="3s">&#9733&#9733&#9733</option>
+                        <option value="4s">&#9733&#9733&#9733&#9733</option>
+                        <option value="5s">&#9733&#9733&#9733&#9733&#9733</option>
+                    </select>
+
                     <select class="select" onChange="onSelectChange(${index})">
                         <option ${task.status === "To do" ? 'selected' : ''} value="To do">To do</option>
                         <option ${task.status === "Doing" ? 'selected' : ''} value="Doing">Doing</option>
-                        <option ${task.status === "Done" ? 'selected' : ''} value="Done">Done</option>
+                        <option value="Done">Done</option>
                     </select> 
                     <button class="x" onclick = "removeItem(${index})"> <i class="fas fa-trash-alt"></i> 
                     </button>
