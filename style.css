@@ -1,3 +1,5 @@
+
+
 body{
     background-color: rgb(247, 247, 199);
 }
@@ -16,12 +18,16 @@ body{
     border: 1px solid #a7aca5;
     padding: 10px;
     margin: 0 40px;
+    margin-top: 10px;
     margin-bottom: 1px;
     flex-direction: row;
     align-items: center;
     padding-right: 50px;
     justify-content: space-between;
     font-family: "Open sans";
+    color: black;
+    background-color: white;
+    font-weight: bolder;
 }
 .inputChange {
     width: 95px;
@@ -30,19 +36,20 @@ body{
     background-color: white;
     border-radius: 5px;
     transition: background-color 1s;
-
 }
+
 .insideButton {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
-    color: rgb(155, 155, 72);
+    color: rgb(129, 129, 75);
 }
 
 .text {
     display: flex;
     justify-content: flex-start;
 }
+
 
 .mod {
     padding: 0;
@@ -64,7 +71,7 @@ button {
 /* titre  */
 .titre {
     color:black;
-    background-color: white;
+    background-color: rgb(240, 235, 235);
     border: 1px solid #7f837d;
     padding-top: 50px;
     padding-left: 50px;
@@ -74,6 +81,7 @@ button {
     font-size: 40px;  
     align-items: center;  
     display: flex;
+    
 }
 /* form group  */
 .form-group {
