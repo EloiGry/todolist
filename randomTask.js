@@ -1,3 +1,4 @@
+
 function randomTask() {
     
     var randomBtn = document.getElementById("random");
@@ -14,6 +15,11 @@ function randomTask() {
     array.push(tasks)
     inmain.innerHTML = ""
     array.forEach(function(task) {
-        inmain.innerHTML = inmain.innerHTML + ` <div class="inside"> <input type="checkbox"><p class="text">${task.value}</p> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x"> <i class="fas fa-trash-alt"></i> </button> </div> </div> `
+        inmain.innerHTML = inmain.innerHTML + ` <div class="inside"> <p class="text">${task.value}</p> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x"> <i class="fas fa-trash-alt"></i> </button>  </div> </div> `
+       
     })
+    displayList ()
 }
+       
+
+//<input type="checkbox">
