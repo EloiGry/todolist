@@ -12,17 +12,17 @@ function displayList (array) {
                 <div class="insideButton"> 
                     <p class="write" id="write${index}"> <i class="fas fa-pencil-alt" onclick="stylo(${index})"></i> </p> 
                     <select class="stars" onChange="onStarChange(${index})">
-                        <option value="1s">&#9733</option>
-                        <option value="2s">&#9733&#9733</option>
-                        <option value="3s">&#9733&#9733&#9733</option>
-                        <option value="4s">&#9733&#9733&#9733&#9733</option>
-                        <option value="5s">&#9733&#9733&#9733&#9733&#9733</option>
+                        <option ${task.priority === 1 ? 'selected' : ''} value="1">&#9734</option>
+                        <option ${task.priority === 2 ? 'selected' : ''} value="2">&#9734&#9734</option>
+                        <option ${task.priority === 3 ? 'selected' : ''} value="3">&#9734&#9734&#9734</option>
+                        <option ${task.priority === 4 ? 'selected' : ''} value="4">&#9734&#9734&#9734&#9734</option>
+                        <option ${task.priority === 5 ? 'selected' : ''} value="5">&#9734&#9734&#9734&#9734&#9734</option>
                     </select>
 
                     <select class="select" onChange="onSelectChange(${index})">
                         <option ${task.status === "To do" ? 'selected' : ''} value="To do">To do</option>
                         <option ${task.status === "Doing" ? 'selected' : ''} value="Doing">Doing</option>
-                        <option value="Done">Done</option>
+                        <option ${task.status === "Done" ? 'selected' : ''} value="Done">Done</option>
                     </select> 
                     <button class="x" onclick = "removeItem(${index})"> <i class="fas fa-trash-alt"></i> 
                     </button>
@@ -38,7 +38,8 @@ function onTaskSubmit() {
 
     var task = {
         value : document.getElementById("input").value,
-        status : "To Do"
+        status : "To Do",
+        priority : 1
     }
     array.push(task)
     displayList (array)
@@ -84,6 +85,16 @@ function filter(status){
         displayList(filterToDo)
 }
 
+function onStarChange (index) {
+    var stars = document.getElementsByClassName("stars")[index]
+    array[index].priority = Number(stars.value)
+    console.log(array);
+}
+
+function priorityTask (){
+    var filterTask = array.sort((a, b) => b.priority - a.priority)
+    displayList(filterTask)
+}
 
 function randomTask() {
     
