@@ -69,17 +69,24 @@ function onSelectChange (index) {
     array[index].status = select.value
 }
 
-
-
-
-
-
-
 function filter(status){
         var filterToDo = array.filter(function(task){
             return task.status === status || status === "All"
         })
         displayList(filterToDo)
+}
+
+
+function randomTask() {
+    
+    var list = ["manger","dormir","boire","sport","douche","nettoyer"]
+    var random = list[Math.floor(Math.random()*list.length)];
+    var tasks = {
+        value : random,
+        status : "To Do"    
+    };
+    array.push(tasks)
+    displayList(array)
 }
 
 
