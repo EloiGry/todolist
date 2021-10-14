@@ -3,7 +3,7 @@
 var inmain = document.getElementById("main")
 var array = []
 
-function displayList () {
+function displayList (array) {
     inmain.innerHTML = ""
 
     array.forEach(function(task, index) {
@@ -13,9 +13,9 @@ function displayList () {
                 <div class="insideButton"> 
                     <p class="write" id="write${index}"> <i class="fas fa-pencil-alt" onclick="stylo(${index})"></i> </p> 
                     <select class="select" onChange="onSelectChange(${index})">
-                        <option ${task.status === "to do" ? 'selected' : ''} value="to do">To do</option>
-                        <option ${task.status === "doing" ? 'selected' : ''} value="doing">Doing</option>
-                        <option ${task.status === "done" ? 'selected' : ''} value="done">Done</option>
+                        <option ${task.status === "To do" ? 'selected' : ''} value="To do">To do</option>
+                        <option ${task.status === "Doing" ? 'selected' : ''} value="Doing">Doing</option>
+                        <option ${task.status === "Done" ? 'selected' : ''} value="Done">Done</option>
                     </select> 
                     <button class="x" onclick = "removeItem(${index})"> <i class="fas fa-trash-alt"></i> 
                     </button>
@@ -33,7 +33,7 @@ function onTaskSubmit() {
         status : "To Do"
     }
     array.push(task)
-    displayList ()
+    displayList (array)
    
 }         
    
@@ -45,21 +45,21 @@ function removeItem(index) {
     array.forEach(function(task, index) {
         inmain.innerHTML = inmain.innerHTML + ` <div class="inside" id="delete"> <p class="text">${task.value}</p> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x" onclick = "removeItem(${index})"> <i class="fas fa-trash-alt"></i> </button> </div> </div> `
       })  
-      displayList () 
+      displayList (array) 
 }
                                  
 
   function stylo(index) {
     var rescribe = document.getElementById(`write${index}`)
     rescribe.innerHTML = ` 
-                            <input id="inputChange" type="texte" placeholder : "New name of the task">
+                            <input id="inputChange" type="texte" placeholder="New name of the task">
                             <button onclick="addNewTask(${index})"> Change </button>
                         `
 }
 
 function addNewTask (index) {
     array[index].value = document.getElementById("inputChange").value
-    displayList()
+    displayList(array)
 }
 
 
@@ -74,23 +74,12 @@ function onSelectChange (index) {
 
 
 
-function button(filter){
-    if (filter === "todo"){
-        var toDoList = tasks.filter(function(array){
-            return array.status = "to do"
+
+function filter(status){
+        var filterToDo = array.filter(function(task){
+            return task.status === status || status === "All"
         })
-        return toDoList
-    }
-    if (filter === "doing"){
-        var doingList = arrays.filter(function(array){
-            return array.status = "doing"
-        })
-        return doingList
-    }
-    if (filter === "done"){
-        var doneList = arrays.filter(function(array){
-            return array.status = "done"
-        })
-        return doneList
-    }
+        displayList(filterToDo)
 }
+
+
