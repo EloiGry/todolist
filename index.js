@@ -18,13 +18,13 @@ function onTaskSubmit() {
             <div class="inside" id="delete"> 
                 <p class="text">${task.value}</p> 
                 <div class="insideButton"> 
-                    <p class="write"> <i class="fas fa-pencil-alt" id="write${index}" onclick = "write(${index})"></i> </p> 
-                    <button class="mod" id="modif-${index}" onclick = "modify(${index})"> Modifier </button> 
+                    <p class="write" id="write${index}"> <i class="fas fa-pencil-alt" onclick="stylo(${index})"></i> </p> 
+                    <button class="mod" id="modif-${index}" onclick="modify(${index})"> Modifier </button> 
                     <button class="x" onclick = "removeItem(${index})"> <i class="fas fa-trash-alt"></i> 
                     </button> 
                 </div> 
             </div> 
-        `
+            `
       })            
 }
 
@@ -37,7 +37,7 @@ function removeItem(index) {
     inmain.innerHTML = ""
     array.forEach(function(task, index) {
         inmain.innerHTML = inmain.innerHTML + ` <div class="inside" id="delete"> <p class="text">${task.value}</p> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x" onclick = "removeItem(${index})"> <i class="fas fa-trash-alt"></i> </button> </div> </div> `
-      })
+      })   
 }
                   
 
@@ -49,15 +49,18 @@ function modify(index) {
                                 <button onclick="secondChoice"><option value="Doing">  Doing </option><button>
                                 <button onclick="thirdChoice"> <option value="Done">  Done </option><button>
                         </select>`
-
   }
 
-  function write(index) {
+  function stylo(index) {
     var rescribe = document.getElementById(`write${index}`)
-    rescribe.innerHTML = `<form>
+    rescribe.innerHTML = `  <form>
                             <input type="texte" placeholder : "New name of the task">
-                         </form>`
+                            </form>`
+
 }
+
+
+
 
 
 // function firstChoice (index) {
