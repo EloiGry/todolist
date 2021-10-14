@@ -1,9 +1,7 @@
 
 function randomTask() {
     
-    var randomBtn = document.getElementById("random");
-    var list = ["manger","dormir","boire","sport","douche","nettoyer"]
-    list.innerHTML
+    var list = ["Faire ses devoirs","Dormir","Boire","Faire du sport","Lire","nettoyer"]
     // generer chiffre aleatoire 
     // recuperer element qui correspond au chiffre dans le tableau list
     // ajouter a la valeur du task
@@ -15,7 +13,7 @@ function randomTask() {
     array.push(tasks)
     inmain.innerHTML = ""
     array.forEach(function(task) {
-        inmain.innerHTML = inmain.innerHTML + ` <div class="inside"> <p class="text">${task.value}</p> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x"> <i class="fas fa-trash-alt"></i> </button>  </div> </div> `
+        inmain.innerHTML = inmain.innerHTML + ` <div class="inside"> <p class="text">${task.value}</p> <div class="insideButton"> <button class="mod"> Modifier </button> <button class="x"> <i class="fas fa-trash-alt"></i></button></div> </div> `
        
     })
     displayList ()
@@ -23,3 +21,6 @@ function randomTask() {
        
 
 //<input type="checkbox">
+
+
+
