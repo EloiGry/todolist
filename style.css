@@ -1,3 +1,5 @@
+
+
 body{
     background-color: rgb(247, 247, 199);
 }
@@ -16,12 +18,16 @@ body{
     border: 1px solid #a7aca5;
     padding: 10px;
     margin: 0 40px;
+    margin-top: 10px;
     margin-bottom: 1px;
     flex-direction: row;
     align-items: center;
     padding-right: 50px;
     justify-content: space-between;
     font-family: "Open sans";
+    color: black;
+    background-color: white;
+    font-weight: bolder;
 }
 .inputChange {
     width: 95px;
@@ -30,31 +36,44 @@ body{
     background-color: white;
     border-radius: 5px;
     transition: background-color 1s;
-
+    justify-content: space-between;
 }
+
 .insideButton {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
-    color: rgb(155, 155, 72);
-}
+    color: rgb(129, 129, 75);
 
+ 
+}
+.stars {
+    margin-right: 50px;
+    border-radius: 50px;
+}
 .text {
     display: flex;
     justify-content: flex-start;
+    font-size: 30px;
+}
+
+.fas {
+    margin-right: 40px;
 }
 
 .mod {
     padding: 0;
     border: none;
     background: none; 
+    
 }
 
 .x {
     padding: 0;
     border: none;
     background: none;
-    margin-left: 10px;
+    margin-left: 30px;
+    justify-content: space-between;
 }
 
 
@@ -64,7 +83,7 @@ button {
 /* titre  */
 .titre {
     color:black;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 1px solid #7f837d;
     padding-top: 50px;
     padding-left: 50px;
@@ -74,6 +93,7 @@ button {
     font-size: 40px;  
     align-items: center;  
     display: flex;
+    
 }
 /* form group  */
 .form-group {
@@ -96,7 +116,9 @@ button {
     width: 900px
     
 }
-
+.stars {
+    justify-content: space-between;
+}
 
 /* section tache  */
 
@@ -134,9 +156,20 @@ button {
     border-radius: 5px;
     transition: background-color 1s;
 }
-
-
-
+.select{
+    margin-right: 50px;
+    border-radius: 50px;
+}
+.select:focus{ /* Bouton add */
+    outline:0;
+}
+.stars {
+    margin-right: 50px;
+    border-radius: 50px;
+}
+.stars:focus{ /* Bouton add */
+    outline:0;
+}
 .add:hover{ /* Bouton add */
     background-color: #9ba199;
     border-color: #717470;
@@ -147,9 +180,9 @@ button {
 }
 
 .todol{ /* Bouton todo */
-    background-color: #4db1f7;
+    background-color: #5786a8;
     color: white;
-    border: #4db1f7;
+    border: #5f89a7;
     transition: background-color 1s;
 }
 
@@ -162,29 +195,29 @@ button {
     outline:0;
 }
 .doing { /* Bouton doing */
-    background-color: #30d13b;
+    background-color: #36793b;
     color: white;
-    border: #30d13b;
+    border: #3c6d3f;
     transition: background-color 1s;
     
 }
 
 .doing:hover { /* Bouton doing */
-    background-color: #287d2e;
-    border-color: #287d2e;
+    background-color: #1f4121;
+    border-color: #234425;
 }
 .doing:focus { /* Bouton doing */
     outline:0;
 }
 .done{ /* Bouton done */
-    background-color: #ff4d4d;
+    background-color: #772f2f;
     color: white;
-    border: #ff4d4d;
+    border: #753636;
     transition: background-color 1s;
 }
 .done:hover { /* Bouton done */
-    background-color: #7c3636;
-    border-color: #703434;
+    background-color: #441c1c;
+    border-color: #3f1c1c;
 }
 
 .done:focus { /* Bouton done */
